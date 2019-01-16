@@ -40,7 +40,12 @@ function windowResized() {
 
 function draw() {
   background(255);
-  frameRate(1);
+  let h = map(constrain(minute(),0,59),0,59,100, 0);
+  console.log(h);
+  colorMode(HSB);
+  background (178,10,h);
+  colorMode(RGB);
+  frameRate(0.5);
   noStroke();
   for (var j = 0; j < rows - 1; j++) {
     for (var i = 0; i < cols - 1; i++) {
